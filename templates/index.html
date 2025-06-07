@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChainTrace - Blockchain Supply Chain Simulator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .header .stats {
+            display: flex;
+            gap: 2rem;
+            color: white;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 400px 400px;
+            gap: 1rem;
+            padding: 1rem;
+            height: calc(100vh - 80px);
+        }
+
+        .panel {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .panel h2 {
+            margin-bottom: 1rem;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .panel-icon {
+            color: #667eea;
+            font-size: 1.2rem;
+        }
+
+        #network-vis {
+            width: 100%;
+            height: calc(100% - 60px);
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+        }
+
+        .control-panel {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #333;
+            border: 1px solid #dee2e6;
+        }
+
+        .btn-secondary:hover {
+            background: #e9ecef;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-control {
+            flex: 1;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        .blockchain-block {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .blockchain-block:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+
+        .block-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .block-index {
+            background: #667eea;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .block-hash {
+            font-family: monospace;
+            font-size: 0.7rem;
+            color: #666;
+            word-break: break-all;
+        }
+
+        .transaction-list {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .transaction {
+            background: white;
+            border-left: 4px solid #28a745;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .transaction.transfer {
+            border-left-color: #007bff;
+        }
+
+        .transaction.create {
+            border-left-color: #28a745;
+        }
+
+        .product-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-name {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .quality-score {
+            background: #28a745;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .quality-score.medium {
+            background: #ffc107;
+        }
+
+        .quality-score.low {
+            background: #dc3545;
+        }
+
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-style: italic;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        .path-visualization {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .path-node {
+            background: #667eea;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .path-arrow {
+            color: #667eea;
+            font-size: 1.2rem;
+        }
+
+        .mining-animation {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: none;
+        }
+
+        .spinner {
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #667eea;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .alert {
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(4, 300px);
+            }
+            
+            .header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><i class="fas fa-link"></i> ChainTrace</h1>
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-value" id="block-count">0</span>
+                <span class="stat-label">Blocks</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value" id="transaction-count">0</span>
+                <span class="stat-label">Transactions</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value" id="product-count">0</span>
+                <span class="stat-label">Products</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Supply Chain Network Panel -->
+        <div class="panel">
+            <h2><i class="fas fa-project-diagram panel-icon"></i>Supply Chain Network</h2>
+            <div class="control-panel">
+                <button class="btn btn-primary" onclick="findShortestPath()">
+                    <i class="fas fa-route"></i> Find Route
+                </button>
+                <button class="btn btn-secondary" onclick="showVulnerabilities()">
+                    <i class="fas fa-exclamation-triangle"></i> Vulnerabilities
+                </button>
+                <select class="form-control" id="route-weight" style="width: auto;">
+                    <option value="cost">Optimize by Cost</option>
+                    <option value="time">Optimize by Time</option>
+                    <option value="distance">Optimize by Distance</option>
+                </select>
+            </div>
+            <div id="network-vis"></div>
+        </div>
+
+        <!-- Blockchain Explorer Panel -->
+        <div class="panel">
+            <h2><i class="fas fa-cube panel-icon"></i>Blockchain Explorer</h2>
+            <div class="control-panel">
+                <button class="btn btn-primary" onclick="mineBlock()">
+                    <i class="fas fa-hammer"></i> Mine Block
+                </button>
+                <button class="btn btn-secondary" onclick="refreshBlockchain()">
+                    <i class="fas fa-sync"></i> Refresh
+                </button>
+            </div>
+            <div class="mining-animation" id="mining-spinner">
+                <div class="spinner"></div>
+            </div>
+            <div id="blockchain-explorer" class="transaction-list"></div>
+        </div>
+
+        <!-- Product Management Panel -->
+        <div class="panel">
+            <h2><i class="fas fa-box panel-icon"></i>Product Management</h2>
+            <div class="control-panel">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="product-name" placeholder="Product Name">
+                    <input type="text" class="form-control" id="batch-number" placeholder="Batch Number">
+                    <select class="form-control" id="origin-select">
+                        <option value="">Select Origin</option>
+                    </select>
+                    <button class="btn btn-primary" onclick="createProduct()">
+                        <i class="fas fa-plus"></i> Create
+                    </button>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="product-search" placeholder="Search Product ID">
+                    <button class="btn btn-secondary" onclick="traceProduct()">
+                        <i class="fas fa-search"></i> Trace
+                    </button>
+                </div>
+            </div>
+            <div id="products-list" class="transaction-list"></div>
+        </div>
+
+        <!-- Analytics Panel -->
+        <div class="panel">
+            <h2><i class="fas fa-chart-bar panel-icon"></i>Analytics & Controls</h2>
+            <div class="control-panel">
+                <button class="btn btn-primary" onclick="simulateTransfer()">
+                    <i class="fas fa-truck"></i> Simulate Transfer
+                </button>
+                <button class="btn btn-secondary" onclick="showAnalytics()">
+                    <i class="fas fa-analytics"></i> View Analytics
+                </button>
+            </div>
+            <div id="analytics-content">
+                <canvas id="analytics-chart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="trace-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('trace-modal')">&times;</span>
+            <h2>Product Trace</h2>
+            <div id="trace-content"></div>
+        </div>
+    </div>
+
+    <div id="route-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('route-modal')">&times;</span>
+            <h2>Optimal Route</h2>
+            <div id="route-content"></div>
+        </div>
+    </div>
+
+    <script>
+        // Global variables
+        let network;
+        let networkData;
+        let socket;
+        let blockchain = [];
+        let products = [];
+        let companies = {};
+
+        // Initialize application
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeSocket();
+            loadNetworkData();
+            loadBlockchain();
+            loadProducts();
+            initializeAnalytics();
+        });
+
+        // Socket.IO initialization
+        function initializeSocket() {
+            socket = io();
+            
+            socket.on('connect', function() {
+                console.log('Connected to server');
+            });
+            
+            socket.on('network_data', function(data) {
+                networkData = data;
+                initializeNetwork();
+                populateOriginSelect();
+            });
+            
+            socket.on('new_block', function(block) {
+                showAlert('New block mined!', 'success');
+                loadBlockchain();
+                updateStats();
+            });
+            
+            socket.on('mining_complete', function(block) {
+                document.getElementById('mining-spinner').style.display = 'none';
+                showAlert('Mining completed!', 'success');
+            });
+        }
+
+        // Load network data
+        async function loadNetworkData() {
+            try {
+                const response = await fetch('/api/network');
+                networkData = await response.json();
+                initializeNetwork();
+                populateOriginSelect();
+            } catch (error) {
+                console.error('Error loading network data:', error);
+            }
+        }
+
+        // Initialize network visualization
+        function initializeNetwork() {
+            const container = document.getElementById('network-vis');
+            
+            const nodes = new vis.DataSet(networkData.nodes.map(node => ({
+                id: node.id,
+                label: node.label,
+                color: getNodeColor(node.type),
+                size: 30,
+                font: { size: 12, color: '#333' }
+            })));
+            
+            const edges = new vis.DataSet(networkData.edges.map(edge => ({
+                from: edge.from,
+                to: edge.to,
+                label: `${edge.cost}`,
+                arrows: 'to',
+                color: { color: '#667eea', highlight: '#764ba2' }
+            })));
+            
+            const data = { nodes: nodes, edges: edges };
+            const options = {
+                layout: {
+                    hierarchical: false
+                },
+                physics: {
+                    enabled: true,
+                    stabilization: { iterations: 100 }
+                },
+                interaction: {
+                    hover: true,
+                    selectConnectedEdges: false
+                }
+            };
+            
+            network = new vis.Network(container, data, options);
+            
+            // Store companies data
+            networkData.nodes.forEach(node => {
+                companies[node.id] = node;
+            });
+        }
+
+        function getNodeColor(type) {
+            const colors = {
+                'supplier': '#28a745',
+                'manufacturer': '#007bff',
+                'distributor': '#ffc107',
+                'retailer': '#dc3545'
+            };
+            return colors[type] || '#6c757d';
+        }
+
+        // Load blockchain data
+        async function loadBlockchain() {
+            try {
+                const response = await fetch('/api/blockchain');
+                blockchain = await response.json();
+                displayBlockchain();
+                updateStats();
+            } catch (error) {
+                console.error('Error loading blockchain:', error);
+            }
+        }
+
+        // Display blockchain
+        function displayBlockchain() {
+            const container = document.getElementById('blockchain-explorer');
+            container.innerHTML = '';
+            
+            blockchain.slice().reverse().forEach(block => {
+                const blockElement = createBlockElement(block);
+                container.appendChild(blockElement);
+            });
+        }
+
+        function createBlockElement(block) {
+            const blockDiv = document.createElement('div');
+            blockDiv.className = 'blockchain-block';
+            
+            blockDiv.innerHTML = `
+                <div class="block-header">
+                    <span class="block-index">Block #${block.index}</span>
+                    <small>${new Date(block.timestamp).toLocaleString()}</small>
+                </div>
+                <div class="block-hash">Hash: ${block.hash.substring(0, 32)}...</div>
+                <div class="transaction-count">${block.transactions.length} transaction(s)</div>
+                <div class="transactions">
+                    ${block.transactions.map(tx => `
+                        <div class="transaction ${tx.action}">
+                            <strong>${tx.action.toUpperCase()}</strong>: ${tx.product_id.substring(0, 8)}...
+                            <br><small>${tx.from_address} → ${tx.to_address}</small>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            
+            return blockDiv;
+        }
+
+        // Load products
+        async function loadProducts() {
+            try {
+                const response = await fetch('/api/products');
+                products = await response.json();
+                displayProducts();
+                updateStats();
+            } catch (error) {
+                console.error('Error loading products:', error);
+            }
+        }
+
+        // Display products
+        function displayProducts() {
+            const container = document.getElementById('products-list');
+            container.innerHTML = '';
+            
+            products.forEach(product => {
+                const productElement = createProductElement(product);
+                container.appendChild(productElement);
+            });
+        }
+
+        function createProductElement(product) {
+            const productDiv = document.createElement('div');
+            productDiv.className = 'product-card';
+            
+            const qualityClass = product.quality_score >= 90 ? 'high' : 
+                                product.quality_score >= 80 ? 'medium' : 'low';
+            
+            productDiv.innerHTML = `
+                <div class="product-header">
+                    <span class="product-name">${product.name}</span>
+                    <span class="quality-score ${qualityClass}">${product.quality_score}%</span>
+                </div>
+                <div><strong>Batch:</strong> ${product.batch_number}</div>
+                <div><strong>Current Location:</strong> ${companies[product.current_location]?.label || product.current_location}</div>
+                <div><strong>Origin:</strong> ${companies[product.origin]?.label || product.origin}</div>
+                <button class="btn btn-secondary" onclick="traceSpecificProduct('${product.id}')" style="margin-top: 0.5rem;">
+                    <i class="fas fa-search"></i> Trace
+                </button>
+            `;
+            
+            return productDiv;
+        }
+
+        // Populate origin select
+        function populateOriginSelect() {
+            const select = document.getElementById('origin-select');
+            select.innerHTML = '<option value="">Select Origin</option>';
+            
+            networkData.nodes.forEach(node => {
+                const option = document.createElement('option');
+                option.value = node.id;
+                option.textContent = node.label;
+                select.appendChild(option);
+            });
+        }
+
+        // Create product
+        async function createProduct() {
+            const name = document.getElementById('product-name').value;
+            const batchNumber = document.getElementById('batch-number').value;
+            const origin = document.getElementById('origin-select').value;
+            
+            if (!name || !batchNumber || !origin) {
+                showAlert('Please fill all fields', 'error');
+                return;
+            }
+            
+            try {
+                const response = await fetch('/api/create_product', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        batch_number: batchNumber,
+                        origin: origin
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    showAlert('Product created successfully!', 'success');
+                    document.getElementById('product-name').value = '';
+                    document.getElementById('batch-number').value = '';
+                    document.getElementById('origin-select').value = '';
+                    loadProducts();
+                } else {
+                    showAlert('Error creating product', 'error');
+                }
+            } catch (error) {
+                console.error('Error creating product:', error);
+                showAlert('Error creating product', 'error');
+            }
+        }
+
+        // Trace product
+        async function traceProduct() {
+            const productId = document.getElementById('product-search').value;
+            if (!productId) {
+                showAlert('Please enter a product ID', 'error');
+                return;
+            }
+            
+            await traceSpecificProduct(productId);
+        }
+
+        async function traceSpecificProduct(productId) {
+            try {
+                const response = await fetch(`/api/trace_product/${productId}`);
+                const result = await response.json();
+                
+                if (result.success) {
+                    displayTraceResult(result);
+                    document.getElementById('trace-modal').style.display = 'block';
+                } else {
+                    showAlert('Product not found', 'error');
+                }
+            } catch (error) {
+                console.error('Error tracing product:', error);
+                showAlert('Error tracing product', 'error');
+            }
+        }
+
+        function displayTraceResult(result) {
+            const container = document.getElementById('trace-content');
+            const product = result.product;
+            const transactions = result.transactions;
+            
+            container.innerHTML = `
+                <div class="product-info">
+                    <h3>${product.name}</h3>
+                    <p><strong>Batch Number:</strong> ${product.batch_number}</p>
+                    <p><strong>Current Location:</strong> ${companies[product.current_location]?.label || product.current_location}</p>
+                    <p><strong>Quality Score:</strong> <span class="quality-score">${product.quality_score}%</span></p>
+                    <p><strong>Created:</strong> ${new Date(product.created_at).toLocaleString()}</p>
+                </div>
+                
+                <h4>Transaction History</h4>
+                <div class="transaction-timeline">
+                    ${transactions.map(tx => `
+                        <div class="transaction ${tx.transaction.action}">
+                            <div><strong>Block #${tx.block_index}</strong> - ${tx.transaction.action.toUpperCase()}</div>
+                            <div>${tx.transaction.from_address} → ${tx.transaction.to_address}</div>
+                            <div><small>${new Date(tx.transaction.timestamp).toLocaleString()}</small></div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        // Find shortest path
+        async function findShortestPath() {
+            const weight = document.getElementById('route-weight').value;
+            
+            // For demo, use first supplier to first retailer
+            const suppliers = networkData.nodes.filter(n => n.type === 'supplier');
+            const retailers = networkData.nodes.filter(n => n.type === 'retailer');
+            
+            if (suppliers.length === 0 || retailers.length === 0) {
+                showAlert('No suppliers or retailers found', 'error');
+                return;
+            }
+            
+            try {
+                const response = await fetch(`/api/shortest_path?start=${suppliers[0].id}&end=${retailers[0].id}&weight=${weight}`);
+                const result = await response.json();
+                
+                if (result.success) {
+                    displayRouteResult(result);
+                    document.getElementById('route-modal').style.display = 'block';
+                } else {
+                    showAlert('No path found', 'error');
+                }
+            } catch (error) {
+                console.error('Error finding path:', error);
+                showAlert('Error finding path', 'error');
+            }
+        }
+
+        function displayRouteResult(result) {
+            const container = document.getElementById('route-content');
+            
+            container.innerHTML = `
+                <div class="path-info">
+                    <p><strong>Total Cost:</strong> ${result.cost}</p>
+                    <p><strong>Path Length:</strong> ${result.path.length} stops</p>
+                </div>
+                
+                <div class="path-visualization">
+                    ${result.path_details.map((stop, index) => `
+                        <span class="path-node">${stop}</span>
+                        ${index < result.path_details.length - 1 ? '<i class="fas fa-arrow-right path-arrow"></i>' : ''}
+                    `).join('')}
+                </div>
+                
+                <div class="path-details">
+                    <h4>Route Details</h4>
+                    ${result.path_details.map((stop, index) => `
+                        <div class="route-step">
+                            <strong>Step ${index + 1}:</strong> ${stop}
+                            ${companies[result.path[index]] ? `(${companies[result.path[index]].type})` : ''}
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        // Mine block
+        async function mineBlock() {
+            document.getElementById('mining-spinner').style.display = 'block';
+            
+            try {
+                const response = await fetch('/api/mine');
+                const result = await response.json();
+                
+                if (result.success) {
+                    showAlert('Block mined successfully!', 'success');
+                    loadBlockchain();
+                } else {
+                    showAlert('No transactions to mine', 'error');
+                }
+            } catch (error) {
+                console.error('Error mining block:', error);
+                showAlert('Error mining block', 'error');
+            } finally {
+                document.getElementById('mining-spinner').style.display = 'none';
+            }
+        }
+
+        // Simulate transfer
+        async function simulateTransfer() {
+            if (products.length === 0) {
+                showAlert('No products available for transfer', 'error');
+                return;
+            }
+            
+            // Random product and transfer
+            const randomProduct = products[Math.floor(Math.random() * products.length)];
+            const currentLocation = randomProduct.current_location;
+            
+            // Find next possible location
+            const possibleDestinations = networkData.edges.filter(edge => edge.from === currentLocation);
+            
+            if (possibleDestinations.length === 0) {
+                showAlert('No possible destinations for this product', 'error');
+                return;
+            }
+            
+            const randomDestination = possibleDestinations[Math.floor(Math.random() * possibleDestinations.length)];
+            
+            try {
+                const response = await fetch('/api/transfer_product', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        product_id: randomProduct.id,
+                        from: currentLocation,
+                        to: randomDestination.to
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    showAlert(`Product transferred to ${companies[randomDestination.to]?.label || randomDestination.to}`, 'success');
+                    loadProducts();
+                } else {
+                    showAlert('Error transferring product', 'error');
+                }
+            } catch (error) {
+                console.error('Error transferring product:', error);
+                showAlert('Error transferring product', 'error');
+            }
+        }
+
+        // Show vulnerabilities
+        async function showVulnerabilities() {
+            try {
+                const response = await fetch('/api/vulnerabilities');
+                const vulnerabilities = await response.json();
+                
+                if (vulnerabilities.length === 0) {
+                    showAlert('No vulnerabilities detected', 'success');
+                } else {
+                    const messages = vulnerabilities.map(v => v.description).join('\n');
+                    showAlert(`Vulnerabilities found:\n${messages}`, 'error');
+                }
+            } catch (error) {
+                console.error('Error checking vulnerabilities:', error);
+                showAlert('Error checking vulnerabilities', 'error');
+            }
+        }
+
+        // Initialize analytics
+        function initializeAnalytics() {
+            const ctx = document.getElementById('analytics-chart').getContext('2d');
+            
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Suppliers', 'Manufacturers', 'Distributors', 'Retailers'],
+                    datasets: [{
+                        data: [1, 2, 1, 2],
+                        backgroundColor: ['#28a745', '#007bff', '#ffc107', '#dc3545']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+        }
+
+        // Show analytics
+        function showAnalytics() {
+            showAlert('Analytics updated with current supply chain data', 'success');
+        }
+
+        // Refresh blockchain
+        function refreshBlockchain() {
+            loadBlockchain();
+            showAlert('Blockchain refreshed', 'success');
+        }
+
+        // Update statistics
+        function updateStats() {
+            document.getElementById('block-count').textContent = blockchain.length;
+            
+            const totalTransactions = blockchain.reduce((sum, block) => sum + block.transactions.length, 0);
+            document.getElementById('transaction-count').textContent = totalTransactions;
+            
+            document.getElementById('product-count').textContent = products.length;
+        }
+
+        // Utility functions
+        function showAlert(message, type) {
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type}`;
+            alertDiv.textContent = message;
+            
+            document.body.insertBefore(alertDiv, document.body.firstChild);
+            
+            setTimeout(() => {
+                alertDiv.remove();
+            }, 3000);
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Close modals when clicking outside
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
