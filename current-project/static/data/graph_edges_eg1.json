@@ -1,0 +1,11 @@
+[
+    ["supplier1", "proc1", {"cost": 5, "time": 1, "distance": 10}],
+    ["supplier2", "proc2", {"cost": 6, "time": 1, "distance": 11}],
+    ["proc1", "hub", {"cost": 3, "time": 1, "distance": 5}],
+    ["proc2", "hub", {"cost": 3, "time": 1, "distance": 5}],
+    ["hub", "manuf1", {"cost": 4, "time": 1, "distance": 7}],
+    ["hub", "manuf2", {"cost": 4, "time": 1, "distance": 7}],
+    ["manuf1", "retail1", {"cost": 7, "time": 2, "distance": 12}],
+    ["manuf1", "retail2", {"cost": 6, "time": 2, "distance": 11}],
+    ["manuf2", "retail3", {"cost": 8, "time": 2, "distance": 13}]
+]

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blockchain Transactions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .block-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="title-bar">
+        <div class="title-main">SyncChain</div>
+        <div class="title-sub">Transactions and Blockchain</div> <!-- Change this dynamically per page -->
+    </div>
+    <div class="sidebar">
+        <h2><a href="/"><i class="fas fa-home"></i> Home</a></h2>
+        <a href="/dashboard" class="{% if request.path == '/dashboard' %}active{% endif %}">
+            <i class="fas fa-tachometer-alt"></i> Dashboard
+        </a>
+        <a href="/network" class="{% if request.path == '/network' %}active{% endif %}">
+            <i class="fas fa-project-diagram"></i> Network
+        </a>
+        <a href="/transactions" class="{% if request.path == '/transactions' %}active{% endif %}">
+            <i class="fas fa-cubes"></i> Transactions and Blockchain
+        </a>
+    </div>
+
+    <div class="main-content">
+        <!-- Your existing page content starts here -->
+        <h1>Manage Products, Transactions and Blockchain</h1>
+
+        <section>
+            <h2>Add Transaction</h2>
+            <input type="text" id="product-id" placeholder="Product ID">
+            <input type="text" id="name" placeholder="Product Name">
+            <select id="from">Source</select>
+            <select id="to">Destination</select>
+
+            <select id="metric">
+                <option value="cost">Cost</option>
+                <option value="time">Time</option>
+                <option value="distance">Distance</option>
+            </select>
+            <button onclick="createProduct()">Add Product</button>
+        </section>
+
+        <section>
+            <h2>Current Products</h2>
+            <div id="products"></div>
+        </section>
+
+        <section>
+            <h2>Blockchain</h2>
+            <button onclick="mineBlock()">Mine Block</button>
+            <p>Blocks</p>
+            <div style="display: flex;">
+                <div>
+                    <div id="blockchain" style="width: 50%;">
+                        <button onclick="showBlockDetails()">Show more</button>
+                    </div>
+                </div>
+                <div id="ehehe" style="width: 50%; padding-left: 1rem;">
+                    <div id="block-details"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="product-panel">
+            <h3>Products</h3>
+        </section>
+    </div>
+    <script src="{{ url_for('static', filename='blockchain.js') }}"></script>
+</body>
+
+</html>

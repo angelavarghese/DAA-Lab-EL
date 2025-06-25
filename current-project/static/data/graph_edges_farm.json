@@ -1,0 +1,7 @@
+[
+    ["farm1", "factory1", {"cost": 5, "time": 2, "distance": 25}],
+    ["factory1", "factory2", {"cost": 8, "time": 1, "distance": 20}],
+    ["factory2", "dist1", {"cost": 12, "time": 3, "distance": 22}],
+    ["dist1", "retail1", {"cost": 6, "time": 1, "distance": 25}],
+    ["dist1", "retail2", {"cost": 4, "time": 1, "distance": 18}]
+]

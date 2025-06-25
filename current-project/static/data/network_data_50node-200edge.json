@@ -1,0 +1,1256 @@
+{
+    "nodes": [
+        {
+            "id": "suppli1",
+            "label": "Supplier 1",
+            "type": "Supplier"
+        },
+        {
+            "id": "proces2",
+            "label": "Processing Unit 2",
+            "type": "Processing Unit"
+        },
+        {
+            "id": "manufa3",
+            "label": "Manufacturer 3",
+            "type": "Manufacturer"
+        },
+        {
+            "id": "distri4",
+            "label": "Distributor 4",
+            "type": "Distributor"
+        },
+        {
+            "id": "consum5",
+            "label": "Consumer 5",
+            "type": "Consumer"
+        },
+        {
+            "id": "suppli6",
+            "label": "Supplier 6",
+            "type": "Supplier"
+        },
+        {
+            "id": "proces7",
+            "label": "Processing Unit 7",
+            "type": "Processing Unit"
+        },
+        {
+            "id": "manufa8",
+            "label": "Manufacturer 8",
+            "type": "Manufacturer"
+        },
+        {
+            "id": "distri9",
+            "label": "Distributor 9",
+            "type": "Distributor"
+        },
+        {
+            "id": "consum10",
+            "label": "Consumer 10",
+            "type": "Consumer"
+        },
+        {
+            "id": "suppli11",
+            "label": "Supplier 11",
+            "type": "Supplier"
+        },
+        {
+            "id": "proces12",
+            "label": "Processing Unit 12",
+            "type": "Processing Unit"
+        },
+        {
+            "id": "manufa13",
+            "label": "Manufacturer 13",
+            "type": "Manufacturer"
+        },
+        {
+            "id": "distri14",
+            "label": "Distributor 14",
+            "type": "Distributor"
+        },
+        {
+            "id": "consum15",
+            "label": "Consumer 15",
+            "type": "Consumer"
+        },
+        {
+            "id": "suppli16",
+            "label": "Supplier 16",
+            "type": "Supplier"
+        },
+        {
+            "id": "proces17",
+            "label": "Processing Unit 17",
+            "type": "Processing Unit"
+        },
+        {
+            "id": "manufa18",
+            "label": "Manufacturer 18",
+            "type": "Manufacturer"
+        },
+        {
+            "id": "distri19",
+            "label": "Distributor 19",
+            "type": "Distributor"
+        },
+        {
+            "id": "consum20",
+            "label": "Consumer 20",
+            "type": "Consumer"
+        },
+        {
+            "id": "suppli21",
+            "label": "Supplier 21",
+            "type": "Supplier"
+        },
+        {
+            "id": "proces22",
+            "label": "Processing Unit 22",
+            "type": "Processing Unit"
+        },
+        {
+            "id": "manufa23",
+            "label": "Manufacturer 23",
+            "type": "Manufacturer"
+        },
+        {
+            "id": "distri24",
+            "label": "Distributor 24",
+            "type": "Distributor"
+        },
+        {
+            "id": "consum25",
+            "label": "Consumer 25",
+            "type": "Consumer"
+        },
+        {
+            "id": "suppli26",
+            "label": "Supplier 26",
+            "type": "Supplier"
+        },
+        {
+            "id": "proces27",
+            "label": "Processing Unit 27",
+            "type": "Processing Unit"
+        },
+        {
+            "id": "manufa28",
+            "label": "Manufacturer 28",
+            "type": "Manufacturer"
+        },
+        {
+            "id": "distri29",
+            "label": "Distributor 29",
+            "type": "Distributor"
+        },
+        {
+            "id": "consum30",
+            "label": "Consumer 30",
+            "type": "Consumer"
+        },
+        {
+            "id": "suppli31",
+            "label": "Supplier 31",
+            "type": "Supplier"
+        },
+        {
+            "id": "proces32",
+            "label": "Processing Unit 32",
+            "type": "Processing Unit"
+        },
+        {
+            "id": "manufa33",
+            "label": "Manufacturer 33",
+            "type": "Manufacturer"
+        },
+        {
+            "id": "distri34",
+            "label": "Distributor 34",
+            "type": "Distributor"
+        },
+        {
+            "id": "consum35",
+            "label": "Consumer 35",
+            "type": "Consumer"
+        },
+        {
+            "id": "suppli36",
+            "label": "Supplier 36",
+            "type": "Supplier"
+        },
+        {
+            "id": "proces37",
+            "label": "Processing Unit 37",
+            "type": "Processing Unit"
+        },
+        {
+            "id": "manufa38",
+            "label": "Manufacturer 38",
+            "type": "Manufacturer"
+        },
+        {
+            "id": "distri39",
+            "label": "Distributor 39",
+            "type": "Distributor"
+        },
+        {
+            "id": "consum40",
+            "label": "Consumer 40",
+            "type": "Consumer"
+        },
+        {
+            "id": "suppli41",
+            "label": "Supplier 41",
+            "type": "Supplier"
+        },
+        {
+            "id": "proces42",
+            "label": "Processing Unit 42",
+            "type": "Processing Unit"
+        },
+        {
+            "id": "manufa43",
+            "label": "Manufacturer 43",
+            "type": "Manufacturer"
+        },
+        {
+            "id": "distri44",
+            "label": "Distributor 44",
+            "type": "Distributor"
+        },
+        {
+            "id": "consum45",
+            "label": "Consumer 45",
+            "type": "Consumer"
+        },
+        {
+            "id": "suppli46",
+            "label": "Supplier 46",
+            "type": "Supplier"
+        },
+        {
+            "id": "proces47",
+            "label": "Processing Unit 47",
+            "type": "Processing Unit"
+        },
+        {
+            "id": "manufa48",
+            "label": "Manufacturer 48",
+            "type": "Manufacturer"
+        },
+        {
+            "id": "distri49",
+            "label": "Distributor 49",
+            "type": "Distributor"
+        },
+        {
+            "id": "consum50",
+            "label": "Consumer 50",
+            "type": "Consumer"
+        }
+    ],
+    "edges": [
+        {
+            "from": "suppli6",
+            "to": "suppli31",
+            "cost": 18
+        },
+        {
+            "from": "manufa28",
+            "to": "distri49",
+            "cost": 21
+        },
+        {
+            "from": "suppli36",
+            "to": "consum30",
+            "cost": 29
+        },
+        {
+            "from": "proces42",
+            "to": "distri9",
+            "cost": 28
+        },
+        {
+            "from": "manufa13",
+            "to": "consum45",
+            "cost": 26
+        },
+        {
+            "from": "manufa23",
+            "to": "proces22",
+            "cost": 13
+        },
+        {
+            "from": "suppli46",
+            "to": "proces17",
+            "cost": 30
+        },
+        {
+            "from": "proces37",
+            "to": "manufa28",
+            "cost": 9
+        },
+        {
+            "from": "suppli46",
+            "to": "consum30",
+            "cost": 5
+        },
+        {
+            "from": "manufa13",
+            "to": "suppli36",
+            "cost": 17
+        },
+        {
+            "from": "manufa38",
+            "to": "manufa3",
+            "cost": 11
+        },
+        {
+            "from": "distri49",
+            "to": "suppli36",
+            "cost": 17
+        },
+        {
+            "from": "suppli11",
+            "to": "suppli41",
+            "cost": 25
+        },
+        {
+            "from": "consum45",
+            "to": "distri19",
+            "cost": 13
+        },
+        {
+            "from": "consum35",
+            "to": "proces2",
+            "cost": 8
+        },
+        {
+            "from": "consum25",
+            "to": "consum20",
+            "cost": 15
+        },
+        {
+            "from": "manufa28",
+            "to": "proces37",
+            "cost": 8
+        },
+        {
+            "from": "suppli11",
+            "to": "manufa48",
+            "cost": 18
+        },
+        {
+            "from": "suppli46",
+            "to": "manufa23",
+            "cost": 28
+        },
+        {
+            "from": "manufa38",
+            "to": "consum10",
+            "cost": 30
+        },
+        {
+            "from": "consum25",
+            "to": "suppli16",
+            "cost": 24
+        },
+        {
+            "from": "manufa38",
+            "to": "consum50",
+            "cost": 8
+        },
+        {
+            "from": "suppli16",
+            "to": "distri4",
+            "cost": 18
+        },
+        {
+            "from": "suppli26",
+            "to": "distri9",
+            "cost": 27
+        },
+        {
+            "from": "manufa13",
+            "to": "consum35",
+            "cost": 6
+        },
+        {
+            "from": "proces27",
+            "to": "manufa28",
+            "cost": 7
+        },
+        {
+            "from": "suppli16",
+            "to": "distri44",
+            "cost": 24
+        },
+        {
+            "from": "distri24",
+            "to": "manufa13",
+            "cost": 27
+        },
+        {
+            "from": "distri19",
+            "to": "distri24",
+            "cost": 15
+        },
+        {
+            "from": "distri24",
+            "to": "proces47",
+            "cost": 17
+        },
+        {
+            "from": "consum35",
+            "to": "suppli31",
+            "cost": 29
+        },
+        {
+            "from": "proces22",
+            "to": "manufa3",
+            "cost": 29
+        },
+        {
+            "from": "distri9",
+            "to": "proces42",
+            "cost": 25
+        },
+        {
+            "from": "distri14",
+            "to": "consum40",
+            "cost": 14
+        },
+        {
+            "from": "consum35",
+            "to": "consum20",
+            "cost": 23
+        },
+        {
+            "from": "distri19",
+            "to": "proces22",
+            "cost": 10
+        },
+        {
+            "from": "suppli31",
+            "to": "manufa3",
+            "cost": 7
+        },
+        {
+            "from": "proces32",
+            "to": "manufa33",
+            "cost": 26
+        },
+        {
+            "from": "proces2",
+            "to": "proces27",
+            "cost": 21
+        },
+        {
+            "from": "proces22",
+            "to": "distri29",
+            "cost": 28
+        },
+        {
+            "from": "distri14",
+            "to": "consum5",
+            "cost": 17
+        },
+        {
+            "from": "distri4",
+            "to": "distri39",
+            "cost": 21
+        },
+        {
+            "from": "consum20",
+            "to": "suppli26",
+            "cost": 25
+        },
+        {
+            "from": "distri4",
+            "to": "consum30",
+            "cost": 9
+        },
+        {
+            "from": "distri4",
+            "to": "suppli31",
+            "cost": 17
+        },
+        {
+            "from": "manufa48",
+            "to": "manufa3",
+            "cost": 18
+        },
+        {
+            "from": "consum45",
+            "to": "distri9",
+            "cost": 19
+        },
+        {
+            "from": "suppli6",
+            "to": "distri4",
+            "cost": 18
+        },
+        {
+            "from": "proces47",
+            "to": "manufa48",
+            "cost": 20
+        },
+        {
+            "from": "suppli1",
+            "to": "consum25",
+            "cost": 28
+        },
+        {
+            "from": "proces37",
+            "to": "suppli11",
+            "cost": 19
+        },
+        {
+            "from": "manufa48",
+            "to": "distri34",
+            "cost": 17
+        },
+        {
+            "from": "suppli46",
+            "to": "suppli36",
+            "cost": 18
+        },
+        {
+            "from": "manufa43",
+            "to": "proces47",
+            "cost": 26
+        },
+        {
+            "from": "proces42",
+            "to": "consum35",
+            "cost": 7
+        },
+        {
+            "from": "proces32",
+            "to": "proces2",
+            "cost": 18
+        },
+        {
+            "from": "consum45",
+            "to": "manufa23",
+            "cost": 28
+        },
+        {
+            "from": "consum40",
+            "to": "consum15",
+            "cost": 9
+        },
+        {
+            "from": "distri9",
+            "to": "suppli16",
+            "cost": 7
+        },
+        {
+            "from": "distri34",
+            "to": "distri19",
+            "cost": 5
+        },
+        {
+            "from": "manufa18",
+            "to": "suppli11",
+            "cost": 19
+        },
+        {
+            "from": "distri29",
+            "to": "manufa38",
+            "cost": 16
+        },
+        {
+            "from": "manufa8",
+            "to": "consum45",
+            "cost": 25
+        },
+        {
+            "from": "manufa28",
+            "to": "distri34",
+            "cost": 29
+        },
+        {
+            "from": "manufa28",
+            "to": "proces7",
+            "cost": 10
+        },
+        {
+            "from": "distri4",
+            "to": "suppli16",
+            "cost": 5
+        },
+        {
+            "from": "manufa33",
+            "to": "distri49",
+            "cost": 15
+        },
+        {
+            "from": "consum50",
+            "to": "suppli16",
+            "cost": 20
+        },
+        {
+            "from": "proces27",
+            "to": "suppli41",
+            "cost": 30
+        },
+        {
+            "from": "consum50",
+            "to": "proces22",
+            "cost": 26
+        },
+        {
+            "from": "suppli26",
+            "to": "suppli1",
+            "cost": 13
+        },
+        {
+            "from": "suppli46",
+            "to": "proces37",
+            "cost": 24
+        },
+        {
+            "from": "consum25",
+            "to": "manufa33",
+            "cost": 5
+        },
+        {
+            "from": "manufa3",
+            "to": "distri19",
+            "cost": 22
+        },
+        {
+            "from": "distri4",
+            "to": "suppli41",
+            "cost": 30
+        },
+        {
+            "from": "consum15",
+            "to": "consum25",
+            "cost": 21
+        },
+        {
+            "from": "suppli31",
+            "to": "consum25",
+            "cost": 13
+        },
+        {
+            "from": "distri29",
+            "to": "proces12",
+            "cost": 9
+        },
+        {
+            "from": "consum5",
+            "to": "distri29",
+            "cost": 29
+        },
+        {
+            "from": "suppli6",
+            "to": "proces17",
+            "cost": 17
+        },
+        {
+            "from": "consum25",
+            "to": "consum40",
+            "cost": 18
+        },
+        {
+            "from": "manufa38",
+            "to": "manufa8",
+            "cost": 16
+        },
+        {
+            "from": "distri34",
+            "to": "distri4",
+            "cost": 20
+        },
+        {
+            "from": "suppli11",
+            "to": "suppli1",
+            "cost": 17
+        },
+        {
+            "from": "proces47",
+            "to": "proces37",
+            "cost": 28
+        },
+        {
+            "from": "consum10",
+            "to": "distri44",
+            "cost": 27
+        },
+        {
+            "from": "suppli26",
+            "to": "proces47",
+            "cost": 30
+        },
+        {
+            "from": "distri4",
+            "to": "manufa28",
+            "cost": 24
+        },
+        {
+            "from": "suppli1",
+            "to": "manufa28",
+            "cost": 23
+        },
+        {
+            "from": "distri39",
+            "to": "consum25",
+            "cost": 8
+        },
+        {
+            "from": "suppli26",
+            "to": "suppli6",
+            "cost": 19
+        },
+        {
+            "from": "manufa18",
+            "to": "distri14",
+            "cost": 21
+        },
+        {
+            "from": "suppli11",
+            "to": "distri9",
+            "cost": 18
+        },
+        {
+            "from": "proces37",
+            "to": "manufa3",
+            "cost": 27
+        },
+        {
+            "from": "manufa48",
+            "to": "distri44",
+            "cost": 10
+        },
+        {
+            "from": "manufa8",
+            "to": "suppli11",
+            "cost": 18
+        },
+        {
+            "from": "suppli6",
+            "to": "suppli16",
+            "cost": 12
+        },
+        {
+            "from": "manufa18",
+            "to": "suppli36",
+            "cost": 12
+        },
+        {
+            "from": "distri9",
+            "to": "manufa23",
+            "cost": 14
+        },
+        {
+            "from": "manufa43",
+            "to": "proces42",
+            "cost": 15
+        },
+        {
+            "from": "distri29",
+            "to": "consum40",
+            "cost": 10
+        },
+        {
+            "from": "distri44",
+            "to": "distri24",
+            "cost": 14
+        },
+        {
+            "from": "consum50",
+            "to": "consum15",
+            "cost": 7
+        },
+        {
+            "from": "distri14",
+            "to": "suppli36",
+            "cost": 26
+        },
+        {
+            "from": "proces47",
+            "to": "consum15",
+            "cost": 25
+        },
+        {
+            "from": "manufa48",
+            "to": "proces2",
+            "cost": 19
+        },
+        {
+            "from": "consum30",
+            "to": "proces42",
+            "cost": 18
+        },
+        {
+            "from": "proces47",
+            "to": "distri9",
+            "cost": 24
+        },
+        {
+            "from": "suppli26",
+            "to": "manufa43",
+            "cost": 22
+        },
+        {
+            "from": "consum45",
+            "to": "consum35",
+            "cost": 9
+        },
+        {
+            "from": "suppli36",
+            "to": "manufa3",
+            "cost": 15
+        },
+        {
+            "from": "suppli41",
+            "to": "consum40",
+            "cost": 16
+        },
+        {
+            "from": "manufa23",
+            "to": "distri14",
+            "cost": 24
+        },
+        {
+            "from": "consum40",
+            "to": "distri19",
+            "cost": 22
+        },
+        {
+            "from": "proces7",
+            "to": "consum40",
+            "cost": 29
+        },
+        {
+            "from": "distri39",
+            "to": "manufa8",
+            "cost": 10
+        },
+        {
+            "from": "consum20",
+            "to": "distri34",
+            "cost": 12
+        },
+        {
+            "from": "proces17",
+            "to": "proces7",
+            "cost": 22
+        },
+        {
+            "from": "consum25",
+            "to": "manufa28",
+            "cost": 19
+        },
+        {
+            "from": "manufa13",
+            "to": "distri4",
+            "cost": 24
+        },
+        {
+            "from": "consum15",
+            "to": "consum50",
+            "cost": 7
+        },
+        {
+            "from": "suppli36",
+            "to": "consum45",
+            "cost": 17
+        },
+        {
+            "from": "proces37",
+            "to": "consum40",
+            "cost": 6
+        },
+        {
+            "from": "proces42",
+            "to": "distri14",
+            "cost": 10
+        },
+        {
+            "from": "manufa43",
+            "to": "proces7",
+            "cost": 21
+        },
+        {
+            "from": "consum15",
+            "to": "manufa8",
+            "cost": 25
+        },
+        {
+            "from": "suppli36",
+            "to": "manufa18",
+            "cost": 24
+        },
+        {
+            "from": "consum30",
+            "to": "manufa43",
+            "cost": 17
+        },
+        {
+            "from": "distri24",
+            "to": "proces27",
+            "cost": 21
+        },
+        {
+            "from": "distri19",
+            "to": "proces32",
+            "cost": 13
+        },
+        {
+            "from": "distri14",
+            "to": "consum45",
+            "cost": 22
+        },
+        {
+            "from": "suppli31",
+            "to": "distri34",
+            "cost": 29
+        },
+        {
+            "from": "suppli31",
+            "to": "consum40",
+            "cost": 23
+        },
+        {
+            "from": "distri29",
+            "to": "distri44",
+            "cost": 14
+        },
+        {
+            "from": "proces27",
+            "to": "proces22",
+            "cost": 14
+        },
+        {
+            "from": "proces12",
+            "to": "proces2",
+            "cost": 6
+        },
+        {
+            "from": "suppli41",
+            "to": "suppli11",
+            "cost": 29
+        },
+        {
+            "from": "suppli1",
+            "to": "suppli11",
+            "cost": 15
+        },
+        {
+            "from": "consum45",
+            "to": "manufa18",
+            "cost": 17
+        },
+        {
+            "from": "suppli11",
+            "to": "proces17",
+            "cost": 15
+        },
+        {
+            "from": "proces2",
+            "to": "proces37",
+            "cost": 5
+        },
+        {
+            "from": "manufa8",
+            "to": "suppli6",
+            "cost": 29
+        },
+        {
+            "from": "proces42",
+            "to": "suppli16",
+            "cost": 21
+        },
+        {
+            "from": "manufa13",
+            "to": "proces7",
+            "cost": 10
+        },
+        {
+            "from": "distri34",
+            "to": "consum10",
+            "cost": 5
+        },
+        {
+            "from": "consum15",
+            "to": "suppli1",
+            "cost": 29
+        },
+        {
+            "from": "distri9",
+            "to": "suppli31",
+            "cost": 27
+        },
+        {
+            "from": "suppli41",
+            "to": "manufa33",
+            "cost": 30
+        },
+        {
+            "from": "proces2",
+            "to": "suppli46",
+            "cost": 11
+        },
+        {
+            "from": "suppli6",
+            "to": "manufa33",
+            "cost": 26
+        },
+        {
+            "from": "suppli11",
+            "to": "consum35",
+            "cost": 5
+        },
+        {
+            "from": "distri44",
+            "to": "consum50",
+            "cost": 18
+        },
+        {
+            "from": "proces2",
+            "to": "suppli6",
+            "cost": 24
+        },
+        {
+            "from": "proces17",
+            "to": "distri49",
+            "cost": 25
+        },
+        {
+            "from": "distri39",
+            "to": "distri19",
+            "cost": 20
+        },
+        {
+            "from": "distri39",
+            "to": "proces7",
+            "cost": 27
+        },
+        {
+            "from": "suppli46",
+            "to": "suppli26",
+            "cost": 15
+        },
+        {
+            "from": "consum35",
+            "to": "consum15",
+            "cost": 23
+        },
+        {
+            "from": "distri14",
+            "to": "distri49",
+            "cost": 25
+        },
+        {
+            "from": "consum10",
+            "to": "proces32",
+            "cost": 29
+        },
+        {
+            "from": "consum45",
+            "to": "consum15",
+            "cost": 10
+        },
+        {
+            "from": "suppli21",
+            "to": "distri24",
+            "cost": 7
+        },
+        {
+            "from": "distri24",
+            "to": "proces37",
+            "cost": 24
+        },
+        {
+            "from": "consum5",
+            "to": "consum15",
+            "cost": 9
+        },
+        {
+            "from": "proces7",
+            "to": "suppli16",
+            "cost": 20
+        },
+        {
+            "from": "manufa13",
+            "to": "distri19",
+            "cost": 7
+        },
+        {
+            "from": "suppli26",
+            "to": "distri44",
+            "cost": 22
+        },
+        {
+            "from": "proces2",
+            "to": "distri39",
+            "cost": 29
+        },
+        {
+            "from": "consum15",
+            "to": "distri29",
+            "cost": 5
+        },
+        {
+            "from": "manufa43",
+            "to": "distri14",
+            "cost": 6
+        },
+        {
+            "from": "consum45",
+            "to": "distri34",
+            "cost": 15
+        },
+        {
+            "from": "consum35",
+            "to": "suppli46",
+            "cost": 12
+        },
+        {
+            "from": "proces42",
+            "to": "manufa18",
+            "cost": 14
+        },
+        {
+            "from": "manufa23",
+            "to": "distri34",
+            "cost": 12
+        },
+        {
+            "from": "suppli1",
+            "to": "distri24",
+            "cost": 21
+        },
+        {
+            "from": "manufa38",
+            "to": "distri24",
+            "cost": 6
+        },
+        {
+            "from": "proces2",
+            "to": "proces47",
+            "cost": 21
+        },
+        {
+            "from": "manufa8",
+            "to": "proces32",
+            "cost": 30
+        },
+        {
+            "from": "proces37",
+            "to": "proces12",
+            "cost": 25
+        },
+        {
+            "from": "distri4",
+            "to": "distri9",
+            "cost": 15
+        },
+        {
+            "from": "proces17",
+            "to": "proces27",
+            "cost": 12
+        },
+        {
+            "from": "proces42",
+            "to": "consum45",
+            "cost": 16
+        },
+        {
+            "from": "distri19",
+            "to": "suppli11",
+            "cost": 5
+        },
+        {
+            "from": "manufa48",
+            "to": "consum15",
+            "cost": 7
+        },
+        {
+            "from": "suppli21",
+            "to": "manufa13",
+            "cost": 11
+        },
+        {
+            "from": "proces37",
+            "to": "proces17",
+            "cost": 29
+        },
+        {
+            "from": "proces17",
+            "to": "proces32",
+            "cost": 20
+        },
+        {
+            "from": "consum15",
+            "to": "proces17",
+            "cost": 24
+        },
+        {
+            "from": "proces22",
+            "to": "manufa8",
+            "cost": 19
+        },
+        {
+            "from": "proces12",
+            "to": "manufa23",
+            "cost": 15
+        },
+        {
+            "from": "consum50",
+            "to": "suppli6",
+            "cost": 18
+        },
+        {
+            "from": "proces2",
+            "to": "distri9",
+            "cost": 21
+        },
+        {
+            "from": "proces32",
+            "to": "manufa18",
+            "cost": 27
+        },
+        {
+            "from": "suppli16",
+            "to": "consum40",
+            "cost": 8
+        },
+        {
+            "from": "consum25",
+            "to": "distri44",
+            "cost": 20
+        },
+        {
+            "from": "suppli46",
+            "to": "distri49",
+            "cost": 22
+        },
+        {
+            "from": "manufa28",
+            "to": "manufa48",
+            "cost": 19
+        },
+        {
+            "from": "proces7",
+            "to": "suppli31",
+            "cost": 6
+        },
+        {
+            "from": "proces47",
+            "to": "manufa18",
+            "cost": 6
+        },
+        {
+            "from": "consum50",
+            "to": "proces17",
+            "cost": 17
+        }
+    ]
+}

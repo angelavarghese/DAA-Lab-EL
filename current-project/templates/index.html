@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SyncChain - Blockchain SCM Simulator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .hero {
+            padding: 4rem 2rem;
+            background: linear-gradient(-45deg, #493D9E, #B2A5FF, #DAD2FF, #FFF2AF);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            color: #100a3f;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero h1 {
+
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        a {
+            color: #493D9E;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #322984;
+            text-decoration: underline;
+        }
+
+        .links-list h3 {
+            margin-top: 1rem;
+            color: #493D9E;
+        }
+
+        .links-list p {
+            margin: 0.3rem 0 1rem;
+        }
+
+        .get-started-btn {
+            display: inline-block;
+            background: #493D9E;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-size: 2rem;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .get-started-btn:hover {
+            background: #bbb3ff;
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="title-bar">
+        <div class="title-main">SyncChain</div>
+        <div class="title-sub">A Blockchain-based Supply Chain Management Simulator</div>
+    </div>
+
+    <div class="sidebar">
+        <h2><a href="/"><i class="fas fa-home"></i> Home</a></h2>
+        <a href="/dashboard" class="{% if request.path == '/dashboard' %}active{% endif %}">
+            <i class="fas fa-tachometer-alt"></i> Dashboard
+        </a>
+        <a href="/network" class="{% if request.path == '/network' %}active{% endif %}">
+            <i class="fas fa-project-diagram"></i> Network
+        </a>
+        <a href="/transactions" class="{% if request.path == '/transactions' %}active{% endif %}">
+            <i class="fas fa-cubes"></i> Transactions and Blockchain
+        </a>
+    </div>
+
+    <div class="main-content">
+        <div class="hero">
+            <h1>Welcome to SyncChain</h1>
+            <p>A visual and interactive simulator for blockchain-based supply chain networks. Navigate through
+                dashboards, monitor transactions, and observe live blockchain behavior.</p>
+        </div>
+
+        <section>
+            <h2>About the Project</h2>
+            <p>
+                SyncChain is designed to simulate a transparent and secure supply chain using blockchain technology. It
+                demonstrates how products flow between different nodes, how blocks are created, and how metrics like
+                cost, time, and efficiency are tracked.
+            </p>
+            <p>
+                With live network visualization and dynamic metrics, it offers insight into decentralized logistics.
+            </p>
+        </section>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="/dashboard" class="get-started-btn">Get Started</a>
+        </div>
+
+        <section class="links-list">
+            <h2>Supporting Documentation</h2>
+            <p>To access detailed writeups and related materials:</p>
+
+            <h3>Research Paper:</h3>
+            <p><a href="https://www.overleaf.com">Access the Research Paper Here</a></p>
+
+            <h3>Detailed Report:</h3>
+            <p><a href="https://www.docs.google.com">View the Full Report</a></p>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+[
+    {"id": "supplier1", "label": "Supplier 1", "type": "Supplier"},
+    {"id": "supplier2", "label": "Supplier 2", "type": "Supplier"},
+    {"id": "proc1", "label": "Processor 1", "type": "Processing Unit"},
+    {"id": "proc2", "label": "Processor 2", "type": "Processing Unit"},
+    {"id": "hub", "label": "Central Hub", "type": "Distributor"},
+    {"id": "manuf1", "label": "Manufacturer 1", "type": "Manufacturer"},
+    {"id": "manuf2", "label": "Manufacturer 2", "type": "Manufacturer"},
+    {"id": "retail1", "label": "Retailer 1", "type": "Retailer"},
+    {"id": "retail2", "label": "Retailer 2", "type": "Retailer"},
+    {"id": "retail3", "label": "Retailer 3", "type": "Retailer"}
+]

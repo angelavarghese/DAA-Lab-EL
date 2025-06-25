@@ -1,0 +1,14 @@
+[
+    ["mine1", "minproc1", {"cost": 12, "time": 2, "distance": 30}],
+    ["mine2", "minproc2", {"cost": 7, "time": 2, "distance": 25}],
+    ["mine3", "minproc2", {"cost": 10, "time": 3, "distance": 28}],
+    ["minproc1", "metproc", {"cost": 8, "time": 2, "distance": 20}],
+    ["minproc2", "metproc", {"cost": 7, "time": 2, "distance": 22}],
+    ["metproc", "fabrication", {"cost": 18, "time": 4, "distance": 35}],
+    ["fabrication", "dist1", {"cost": 20, "time": 3, "distance": 40}],
+    ["fabrication", "dist2", {"cost": 25, "time": 4, "distance": 45}],
+    ["dist1", "cons1", {"cost": 4, "time": 1, "distance": 15}],
+    ["dist1", "cons2", {"cost": 13, "time": 2, "distance": 22}],
+    ["dist2", "cons3", {"cost": 19, "time": 3, "distance": 30}],
+    ["dist2", "cons4", {"cost": 8, "time": 1, "distance": 18}]
+]

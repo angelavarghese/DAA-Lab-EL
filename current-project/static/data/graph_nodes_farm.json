@@ -1,0 +1,8 @@
+[
+    {"id": "farm1", "label": "Farm 1", "type": "supplier"},
+    {"id": "factory1", "label": "Factory 1", "type": "manufacturer"},
+    {"id": "factory2", "label": "Factory 2", "type": "manufacturer"},
+    {"id": "dist1", "label": "Distributor 1", "type": "distributor"},
+    {"id": "retail1", "label": "Retailer 1", "type": "retailer"},
+    {"id": "retail2", "label": "Retailer 2", "type": "retailer"}
+]

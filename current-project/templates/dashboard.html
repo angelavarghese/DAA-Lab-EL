@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blockchain Transactions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background: linear-gradient(135deg, #B2A5FF, #DAD2FF);
+            min-height: 100vh;
+            background-size: 200% 200%;
+            animation: gradientShift 10s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .title-bar {
+            background: #493D9E;
+            color: white;
+            padding: 1rem 2rem;
+            border-bottom: 2px solid #ccc;
+            margin-left: 220px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title-main {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .title-sub {
+            font-size: 1.5rem;
+            color: #FFF2AF;
+            margin-top: 4px;
+        }
+
+        .dashboard-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            min-width: 200px;
+            flex: 1 1 220px;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .chart-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+            align-items: flex-start;
+        }
+
+        .chart-card {
+            flex: 2;
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            min-width: 300px;
+        }
+
+        .metrics-card {
+            flex: 1;
+            min-width: 200px;
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .metrics-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .metrics-card ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .metrics-card li {
+            padding: 4px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        canvas:hover {
+            filter: brightness(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title-bar">
+        <div class="title-main">SyncChain</div>
+        <div class="title-sub">Dashboard</div> <!-- Change this dynamically per page -->
+    </div>
+    <div class="sidebar">
+        <h2><a href="/"><i class="fas fa-home"></i> Home</a></h2>
+        <a href="/dashboard" class="{% if request.path == '/dashboard' %}active{% endif %}">
+            <i class="fas fa-tachometer-alt"></i> Dashboard
+        </a>
+        <a href="/network" class="{% if request.path == '/network' %}active{% endif %}">
+            <i class="fas fa-project-diagram"></i> Network
+        </a>
+        <a href="/transactions" class="{% if request.path == '/transactions' %}active{% endif %}">
+            <i class="fas fa-cubes"></i> Transactions and Blockchain
+        </a>
+    </div>
+
+  <div class="main-content">
+    <div id="dashboard-cards" class="dashboard-container"></div>
+
+    <div class="chart-section">
+      <div class="chart-card">
+        <canvas id="nodeTypeChart"></canvas>
+      </div>
+      <div class="metrics-card">
+        <h3>Metrics</h3>
+        <ul>
+          <li>Distance</li>
+          <li>Cost</li>
+          <li>Time</li>
+        </ul>
+      </div>
+    <div class="card" id="ap-count-card">
+        <strong>Articulation Points</strong><br>
+        <span id="ap-count" style="font-size:1.8rem;">0</span>
+    </div>
+    <div class="card" id="ap-list-card">
+        <strong>Critical Nodes</strong>
+        <p id="ap-list" style="margin-top: 0.5rem; color: #555; font-size: 0.95rem;"></p>
+    </div>
+      <div class="card" id="node-count">Total Nodes: --</div>
+      <div class="card" id="avg-cost">Avg. Cost: --</div>
+      <div class="card" id="avg-time">Avg. Time: --</div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+</html>

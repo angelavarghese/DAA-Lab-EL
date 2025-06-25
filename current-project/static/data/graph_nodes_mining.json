@@ -1,0 +1,15 @@
+[
+    {"id": "mine1", "label": "Mine 1", "type": "Supplier"},
+    {"id": "mine2", "label": "Mine 2", "type": "Supplier"},
+    {"id": "mine3", "label": "Mine 3", "type": "Supplier"},
+    {"id": "minproc1", "label": "Mineral Processing Unit 1", "type": "Processing Unit"},
+    {"id": "minproc2", "label": "Mineral Processing Unit 2", "type": "Processing Unit"},
+    {"id": "metproc", "label": "Metallurgical Processing Unit", "type": "Processing Unit"},
+    {"id": "fabrication", "label": "Material Fabrication", "type": "Manufacturer"},
+    {"id": "dist1", "label": "Distributor 1", "type": "Distributor"},
+    {"id": "dist2", "label": "Distributor 2", "type": "Distributor"},
+    {"id": "cons1", "label": "Industrial Consumer 1", "type": "Consumer"},
+    {"id": "cons2", "label": "Industrial Consumer 2", "type": "Consumer"},
+    {"id": "cons3", "label": "Industrial Consumer 3", "type": "Consumer"},
+    {"id": "cons4", "label": "Industrial Consumer 4", "type": "Consumer"}
+]

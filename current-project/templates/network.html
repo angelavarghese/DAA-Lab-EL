@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Supply Chain Network</title>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="title-bar">
+        <div class="title-main">SyncChain</div>
+        <div class="title-sub">Network</div> <!-- Change this dynamically per page -->
+    </div>
+    <div class="sidebar">
+        <h2><a href="/"><i class="fas fa-home"></i> Home</a></h2>
+        <a href="/dashboard" class="{% if request.path == '/dashboard' %}active{% endif %}">
+            <i class="fas fa-tachometer-alt"></i> Dashboard
+        </a>
+        <a href="/network" class="{% if request.path == '/network' %}active{% endif %}">
+            <i class="fas fa-project-diagram"></i> Network
+        </a>
+        <a href="/transactions" class="{% if request.path == '/transactions' %}active{% endif %}">
+            <i class="fas fa-cubes"></i> Transactions and Blockchain
+        </a>
+    </div>
+
+    <div class="main-content">
+        <h1>Supply Chain Network</h1>
+        <div style="display: flex; height: 60vh; gap: 20px;">
+            <!-- Network Visualization -->
+            <div id="network-vis" style="flex: 3; height: 100%; border: 1px solid #ccc;"></div>
+
+            <!-- Side Panel -->
+            <div id="side-panel" style="
+                flex: 1;
+                height: 100%;
+                overflow-y: auto;
+                box-sizing: border-box;
+                padding: 20px;
+                background-color: #dfdbff;
+                border-left: 2px solid #eee;
+                box-shadow: inset 1px 0 4px rgba(0, 0, 0, 0.05);
+            ">
+                <h3 style="
+                    margin-top: 0;
+                    font-size: 1.25rem;
+                    color: #493D9E;
+                    font-weight: 600;
+                ">Available Routes</h3>
+
+                <div id="product-cards" style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    border-color: black;
+                    border-radius: 15px;
+                "></div>
+            </div>
+
+        </div>
+
+
+        <div id="metrics-panel">
+            <h2>Analytics</h2>
+            <div class="product-box" id="algo-performance">
+                <h3>Algorithm Performance</h3>
+                <p>Nodes Evaluated: <span id="nodes-evaluated">0</span></p>
+                <p>Optimal Path Found: <span id="paths-found">0</span></p>
+                <p>Computation Time: <span id="comp-time">0s</span></p>
+            </div>
+            <div class="product-box" id="route-stats">
+                <h3>Route Statistics</h3>
+                <p>Total Routes: <span id="total-routes">0</span></p>
+                <p>Optimal Routes: <span id="optimal-routes">0</span></p>
+                <p>Avg. Cost Reduction: <span id="cost-reduction">0%</span></p>
+            </div>
+            <div class="product-box" id="network-status">
+                <h3>Network Status</h3>
+                <p>Active Nodes: <span id="active-nodes">0</span></p>
+                <p>Network Health: <span id="net-health">N/A</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='network.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,347 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(-45deg, #493D9E, #B2A5FF, #DAD2FF, #FFF2AF);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  padding: 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+  width: 220px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #1f2937;
+  color: white;
+  padding: 1rem;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.sidebar .sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ccc;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.sidebar a i {
+  width: 20px;
+  text-align: center;
+  color: #B2A5FF;
+}
+
+.sidebar a:hover {
+  color: white;
+  background-color: #2c3a4b;
+}
+
+.sidebar a.active {
+  color: white;
+  font-weight: bold;
+  background-color: #374151;
+  padding-left: 0.5rem;
+  border-left: 4px solid #10b981;
+}
+
+.title-bar {
+  background: #493D9E;
+  color: white;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #ccc;
+  margin-left: 220px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-main {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.title-sub {
+  font-size: 1.5rem;
+  color: #DAD2FF;
+  margin-top: 4px;
+}
+
+.main-content {
+  margin-left: 220px;
+  padding: 1rem;
+  transition: margin-left 0.3s ease;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1 1 220px;
+  min-width: 220px;
+  max-width: 250px;
+  height: 130px;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  background: #DAD2FF;
+}
+
+.chart-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: flex-start;
+}
+
+.chart-card {
+  flex: 2;
+  background: #FFF2AF;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.chart-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.metrics-card {
+  flex: 1;
+  min-width: 200px;
+  background: #B2A5FF;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.metrics-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.metrics-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.metrics-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.metrics-card li {
+  padding: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+#network-vis {
+  border: 2px solid #B2A5FF;
+  background: #ffffff;
+  height: 600px;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#network-vis:hover {
+  box-shadow: 0 6px 15px rgba(73, 61, 158, 0.2);
+  transform: scale(1.01);
+}
+
+
+
+input,
+select,
+button {
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select {
+  padding: 0.5rem 1rem;
+  border: 1px solid #B2A5FF;
+  background: #FFF2AF;
+  color: #333;
+  cursor: pointer;
+}
+
+select:hover {
+  background: #DAD2FF;
+  border-color: #493D9E;
+}
+
+select:focus {
+  outline: none;
+  border-color: #493D9E;
+  box-shadow: 0 0 5px rgba(73, 61, 158, 0.5);
+}
+
+input[type="text"] {
+  border: 1px solid #B2A5FF;
+  background-color: #ffffff;
+  color: #333;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #493D9E;
+  box-shadow: 0 0 5px rgba(73, 61, 158, 0.5);
+}
+
+button {
+  background: #493D9E;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #322984;
+  transform: scale(1.05);
+}
+
+canvas:hover {
+  filter: brightness(1.1);
+  transition: filter 0.2s ease-in-out;
+}
+
+#products,
+#blockchain {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.panel {
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  flex: 1 1 250px;
+  border-color: black;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.product-scroll {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allows wrapping if space runs out */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.product-box {
+  background: #ffffff;
+  border: 1px solid #B2A5FF;
+  padding: 1rem;
+  border-radius: 10px;
+  min-width: 200px;
+  max-width: 250px;
+  flex: 1 1 220px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.product-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  background: #DAD2FF;
+}
+
+#metrics-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  align-items: flex-start;
+}
+
+#metrics-panel h2 {
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #493D9E;
+}
+
+#product-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.product-card {
+  flex: 1 1 10px;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #B2A5FF;
+  max-width: 300px;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background: #DAD2FF;
+  border-color: #493D9E;
+}

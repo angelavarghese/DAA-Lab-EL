@@ -1,0 +1,1802 @@
+[
+    [
+        "suppli6",
+        "suppli31",
+        {
+            "cost": 18,
+            "time": 3,
+            "distance": 44
+        }
+    ],
+    [
+        "manufa28",
+        "distri49",
+        {
+            "cost": 21,
+            "time": 2,
+            "distance": 32
+        }
+    ],
+    [
+        "suppli36",
+        "consum30",
+        {
+            "cost": 29,
+            "time": 4,
+            "distance": 16
+        }
+    ],
+    [
+        "proces42",
+        "distri9",
+        {
+            "cost": 28,
+            "time": 1,
+            "distance": 20
+        }
+    ],
+    [
+        "manufa13",
+        "consum45",
+        {
+            "cost": 26,
+            "time": 2,
+            "distance": 12
+        }
+    ],
+    [
+        "manufa23",
+        "proces22",
+        {
+            "cost": 13,
+            "time": 1,
+            "distance": 18
+        }
+    ],
+    [
+        "suppli46",
+        "proces17",
+        {
+            "cost": 30,
+            "time": 1,
+            "distance": 47
+        }
+    ],
+    [
+        "proces37",
+        "manufa28",
+        {
+            "cost": 9,
+            "time": 1,
+            "distance": 41
+        }
+    ],
+    [
+        "suppli46",
+        "consum30",
+        {
+            "cost": 5,
+            "time": 1,
+            "distance": 15
+        }
+    ],
+    [
+        "manufa13",
+        "suppli36",
+        {
+            "cost": 17,
+            "time": 5,
+            "distance": 22
+        }
+    ],
+    [
+        "manufa38",
+        "manufa3",
+        {
+            "cost": 11,
+            "time": 4,
+            "distance": 38
+        }
+    ],
+    [
+        "distri49",
+        "suppli36",
+        {
+            "cost": 17,
+            "time": 1,
+            "distance": 48
+        }
+    ],
+    [
+        "suppli11",
+        "suppli41",
+        {
+            "cost": 25,
+            "time": 5,
+            "distance": 21
+        }
+    ],
+    [
+        "consum45",
+        "distri19",
+        {
+            "cost": 13,
+            "time": 3,
+            "distance": 41
+        }
+    ],
+    [
+        "consum35",
+        "proces2",
+        {
+            "cost": 8,
+            "time": 1,
+            "distance": 47
+        }
+    ],
+    [
+        "consum25",
+        "consum20",
+        {
+            "cost": 15,
+            "time": 4,
+            "distance": 10
+        }
+    ],
+    [
+        "manufa28",
+        "proces37",
+        {
+            "cost": 8,
+            "time": 1,
+            "distance": 20
+        }
+    ],
+    [
+        "suppli11",
+        "manufa48",
+        {
+            "cost": 18,
+            "time": 1,
+            "distance": 11
+        }
+    ],
+    [
+        "suppli46",
+        "manufa23",
+        {
+            "cost": 28,
+            "time": 1,
+            "distance": 20
+        }
+    ],
+    [
+        "manufa38",
+        "consum10",
+        {
+            "cost": 30,
+            "time": 2,
+            "distance": 38
+        }
+    ],
+    [
+        "consum25",
+        "suppli16",
+        {
+            "cost": 24,
+            "time": 4,
+            "distance": 12
+        }
+    ],
+    [
+        "manufa38",
+        "consum50",
+        {
+            "cost": 8,
+            "time": 3,
+            "distance": 22
+        }
+    ],
+    [
+        "suppli16",
+        "distri4",
+        {
+            "cost": 18,
+            "time": 1,
+            "distance": 47
+        }
+    ],
+    [
+        "suppli26",
+        "distri9",
+        {
+            "cost": 27,
+            "time": 1,
+            "distance": 50
+        }
+    ],
+    [
+        "manufa13",
+        "consum35",
+        {
+            "cost": 6,
+            "time": 2,
+            "distance": 37
+        }
+    ],
+    [
+        "proces27",
+        "manufa28",
+        {
+            "cost": 7,
+            "time": 1,
+            "distance": 39
+        }
+    ],
+    [
+        "suppli16",
+        "distri44",
+        {
+            "cost": 24,
+            "time": 1,
+            "distance": 44
+        }
+    ],
+    [
+        "distri24",
+        "manufa13",
+        {
+            "cost": 27,
+            "time": 3,
+            "distance": 23
+        }
+    ],
+    [
+        "distri19",
+        "distri24",
+        {
+            "cost": 15,
+            "time": 2,
+            "distance": 35
+        }
+    ],
+    [
+        "distri24",
+        "proces47",
+        {
+            "cost": 17,
+            "time": 3,
+            "distance": 14
+        }
+    ],
+    [
+        "consum35",
+        "suppli31",
+        {
+            "cost": 29,
+            "time": 4,
+            "distance": 48
+        }
+    ],
+    [
+        "proces22",
+        "manufa3",
+        {
+            "cost": 29,
+            "time": 2,
+            "distance": 31
+        }
+    ],
+    [
+        "distri9",
+        "proces42",
+        {
+            "cost": 25,
+            "time": 3,
+            "distance": 36
+        }
+    ],
+    [
+        "distri14",
+        "consum40",
+        {
+            "cost": 14,
+            "time": 2,
+            "distance": 37
+        }
+    ],
+    [
+        "consum35",
+        "consum20",
+        {
+            "cost": 23,
+            "time": 4,
+            "distance": 40
+        }
+    ],
+    [
+        "distri19",
+        "proces22",
+        {
+            "cost": 10,
+            "time": 5,
+            "distance": 20
+        }
+    ],
+    [
+        "suppli31",
+        "manufa3",
+        {
+            "cost": 7,
+            "time": 5,
+            "distance": 30
+        }
+    ],
+    [
+        "proces32",
+        "manufa33",
+        {
+            "cost": 26,
+            "time": 1,
+            "distance": 44
+        }
+    ],
+    [
+        "proces2",
+        "proces27",
+        {
+            "cost": 21,
+            "time": 2,
+            "distance": 38
+        }
+    ],
+    [
+        "proces22",
+        "distri29",
+        {
+            "cost": 28,
+            "time": 3,
+            "distance": 10
+        }
+    ],
+    [
+        "distri14",
+        "consum5",
+        {
+            "cost": 17,
+            "time": 2,
+            "distance": 14
+        }
+    ],
+    [
+        "distri4",
+        "distri39",
+        {
+            "cost": 21,
+            "time": 4,
+            "distance": 35
+        }
+    ],
+    [
+        "consum20",
+        "suppli26",
+        {
+            "cost": 25,
+            "time": 3,
+            "distance": 15
+        }
+    ],
+    [
+        "distri4",
+        "consum30",
+        {
+            "cost": 9,
+            "time": 1,
+            "distance": 49
+        }
+    ],
+    [
+        "distri4",
+        "suppli31",
+        {
+            "cost": 17,
+            "time": 2,
+            "distance": 13
+        }
+    ],
+    [
+        "manufa48",
+        "manufa3",
+        {
+            "cost": 18,
+            "time": 5,
+            "distance": 26
+        }
+    ],
+    [
+        "consum45",
+        "distri9",
+        {
+            "cost": 19,
+            "time": 5,
+            "distance": 40
+        }
+    ],
+    [
+        "suppli6",
+        "distri4",
+        {
+            "cost": 18,
+            "time": 4,
+            "distance": 28
+        }
+    ],
+    [
+        "proces47",
+        "manufa48",
+        {
+            "cost": 20,
+            "time": 4,
+            "distance": 12
+        }
+    ],
+    [
+        "suppli1",
+        "consum25",
+        {
+            "cost": 28,
+            "time": 1,
+            "distance": 44
+        }
+    ],
+    [
+        "proces37",
+        "suppli11",
+        {
+            "cost": 19,
+            "time": 2,
+            "distance": 45
+        }
+    ],
+    [
+        "manufa48",
+        "distri34",
+        {
+            "cost": 17,
+            "time": 4,
+            "distance": 31
+        }
+    ],
+    [
+        "suppli46",
+        "suppli36",
+        {
+            "cost": 18,
+            "time": 4,
+            "distance": 30
+        }
+    ],
+    [
+        "manufa43",
+        "proces47",
+        {
+            "cost": 26,
+            "time": 5,
+            "distance": 20
+        }
+    ],
+    [
+        "proces42",
+        "consum35",
+        {
+            "cost": 7,
+            "time": 4,
+            "distance": 10
+        }
+    ],
+    [
+        "proces32",
+        "proces2",
+        {
+            "cost": 18,
+            "time": 3,
+            "distance": 33
+        }
+    ],
+    [
+        "consum45",
+        "manufa23",
+        {
+            "cost": 28,
+            "time": 3,
+            "distance": 15
+        }
+    ],
+    [
+        "consum40",
+        "consum15",
+        {
+            "cost": 9,
+            "time": 2,
+            "distance": 25
+        }
+    ],
+    [
+        "distri9",
+        "suppli16",
+        {
+            "cost": 7,
+            "time": 4,
+            "distance": 39
+        }
+    ],
+    [
+        "distri34",
+        "distri19",
+        {
+            "cost": 5,
+            "time": 5,
+            "distance": 24
+        }
+    ],
+    [
+        "manufa18",
+        "suppli11",
+        {
+            "cost": 19,
+            "time": 4,
+            "distance": 15
+        }
+    ],
+    [
+        "distri29",
+        "manufa38",
+        {
+            "cost": 16,
+            "time": 5,
+            "distance": 41
+        }
+    ],
+    [
+        "manufa8",
+        "consum45",
+        {
+            "cost": 25,
+            "time": 3,
+            "distance": 40
+        }
+    ],
+    [
+        "manufa28",
+        "distri34",
+        {
+            "cost": 29,
+            "time": 5,
+            "distance": 15
+        }
+    ],
+    [
+        "manufa28",
+        "proces7",
+        {
+            "cost": 10,
+            "time": 2,
+            "distance": 10
+        }
+    ],
+    [
+        "distri4",
+        "suppli16",
+        {
+            "cost": 5,
+            "time": 3,
+            "distance": 18
+        }
+    ],
+    [
+        "manufa33",
+        "distri49",
+        {
+            "cost": 15,
+            "time": 2,
+            "distance": 25
+        }
+    ],
+    [
+        "consum50",
+        "suppli16",
+        {
+            "cost": 20,
+            "time": 2,
+            "distance": 24
+        }
+    ],
+    [
+        "proces27",
+        "suppli41",
+        {
+            "cost": 30,
+            "time": 4,
+            "distance": 42
+        }
+    ],
+    [
+        "consum50",
+        "proces22",
+        {
+            "cost": 26,
+            "time": 2,
+            "distance": 15
+        }
+    ],
+    [
+        "suppli26",
+        "suppli1",
+        {
+            "cost": 13,
+            "time": 5,
+            "distance": 23
+        }
+    ],
+    [
+        "suppli46",
+        "proces37",
+        {
+            "cost": 24,
+            "time": 3,
+            "distance": 29
+        }
+    ],
+    [
+        "consum25",
+        "manufa33",
+        {
+            "cost": 5,
+            "time": 1,
+            "distance": 50
+        }
+    ],
+    [
+        "manufa3",
+        "distri19",
+        {
+            "cost": 22,
+            "time": 1,
+            "distance": 44
+        }
+    ],
+    [
+        "distri4",
+        "suppli41",
+        {
+            "cost": 30,
+            "time": 2,
+            "distance": 43
+        }
+    ],
+    [
+        "consum15",
+        "consum25",
+        {
+            "cost": 21,
+            "time": 2,
+            "distance": 38
+        }
+    ],
+    [
+        "suppli31",
+        "consum25",
+        {
+            "cost": 13,
+            "time": 5,
+            "distance": 50
+        }
+    ],
+    [
+        "distri29",
+        "proces12",
+        {
+            "cost": 9,
+            "time": 1,
+            "distance": 46
+        }
+    ],
+    [
+        "consum5",
+        "distri29",
+        {
+            "cost": 29,
+            "time": 1,
+            "distance": 32
+        }
+    ],
+    [
+        "suppli6",
+        "proces17",
+        {
+            "cost": 17,
+            "time": 5,
+            "distance": 44
+        }
+    ],
+    [
+        "consum25",
+        "consum40",
+        {
+            "cost": 18,
+            "time": 4,
+            "distance": 24
+        }
+    ],
+    [
+        "manufa38",
+        "manufa8",
+        {
+            "cost": 16,
+            "time": 1,
+            "distance": 11
+        }
+    ],
+    [
+        "distri34",
+        "distri4",
+        {
+            "cost": 20,
+            "time": 1,
+            "distance": 40
+        }
+    ],
+    [
+        "suppli11",
+        "suppli1",
+        {
+            "cost": 17,
+            "time": 1,
+            "distance": 37
+        }
+    ],
+    [
+        "proces47",
+        "proces37",
+        {
+            "cost": 28,
+            "time": 1,
+            "distance": 31
+        }
+    ],
+    [
+        "consum10",
+        "distri44",
+        {
+            "cost": 27,
+            "time": 4,
+            "distance": 19
+        }
+    ],
+    [
+        "suppli26",
+        "proces47",
+        {
+            "cost": 30,
+            "time": 1,
+            "distance": 45
+        }
+    ],
+    [
+        "distri4",
+        "manufa28",
+        {
+            "cost": 24,
+            "time": 3,
+            "distance": 27
+        }
+    ],
+    [
+        "suppli1",
+        "manufa28",
+        {
+            "cost": 23,
+            "time": 2,
+            "distance": 21
+        }
+    ],
+    [
+        "distri39",
+        "consum25",
+        {
+            "cost": 8,
+            "time": 1,
+            "distance": 42
+        }
+    ],
+    [
+        "suppli26",
+        "suppli6",
+        {
+            "cost": 19,
+            "time": 5,
+            "distance": 27
+        }
+    ],
+    [
+        "manufa18",
+        "distri14",
+        {
+            "cost": 21,
+            "time": 4,
+            "distance": 36
+        }
+    ],
+    [
+        "suppli11",
+        "distri9",
+        {
+            "cost": 18,
+            "time": 1,
+            "distance": 38
+        }
+    ],
+    [
+        "proces37",
+        "manufa3",
+        {
+            "cost": 27,
+            "time": 4,
+            "distance": 14
+        }
+    ],
+    [
+        "manufa48",
+        "distri44",
+        {
+            "cost": 10,
+            "time": 1,
+            "distance": 41
+        }
+    ],
+    [
+        "manufa8",
+        "suppli11",
+        {
+            "cost": 18,
+            "time": 1,
+            "distance": 49
+        }
+    ],
+    [
+        "suppli6",
+        "suppli16",
+        {
+            "cost": 12,
+            "time": 1,
+            "distance": 50
+        }
+    ],
+    [
+        "manufa18",
+        "suppli36",
+        {
+            "cost": 12,
+            "time": 1,
+            "distance": 49
+        }
+    ],
+    [
+        "distri9",
+        "manufa23",
+        {
+            "cost": 14,
+            "time": 5,
+            "distance": 33
+        }
+    ],
+    [
+        "manufa43",
+        "proces42",
+        {
+            "cost": 15,
+            "time": 4,
+            "distance": 19
+        }
+    ],
+    [
+        "distri29",
+        "consum40",
+        {
+            "cost": 10,
+            "time": 2,
+            "distance": 31
+        }
+    ],
+    [
+        "distri44",
+        "distri24",
+        {
+            "cost": 14,
+            "time": 4,
+            "distance": 44
+        }
+    ],
+    [
+        "consum50",
+        "consum15",
+        {
+            "cost": 7,
+            "time": 5,
+            "distance": 11
+        }
+    ],
+    [
+        "distri14",
+        "suppli36",
+        {
+            "cost": 26,
+            "time": 1,
+            "distance": 44
+        }
+    ],
+    [
+        "proces47",
+        "consum15",
+        {
+            "cost": 25,
+            "time": 4,
+            "distance": 26
+        }
+    ],
+    [
+        "manufa48",
+        "proces2",
+        {
+            "cost": 19,
+            "time": 3,
+            "distance": 17
+        }
+    ],
+    [
+        "consum30",
+        "proces42",
+        {
+            "cost": 18,
+            "time": 5,
+            "distance": 12
+        }
+    ],
+    [
+        "proces47",
+        "distri9",
+        {
+            "cost": 24,
+            "time": 1,
+            "distance": 13
+        }
+    ],
+    [
+        "suppli26",
+        "manufa43",
+        {
+            "cost": 22,
+            "time": 1,
+            "distance": 26
+        }
+    ],
+    [
+        "consum45",
+        "consum35",
+        {
+            "cost": 9,
+            "time": 5,
+            "distance": 50
+        }
+    ],
+    [
+        "suppli36",
+        "manufa3",
+        {
+            "cost": 15,
+            "time": 5,
+            "distance": 16
+        }
+    ],
+    [
+        "suppli41",
+        "consum40",
+        {
+            "cost": 16,
+            "time": 4,
+            "distance": 32
+        }
+    ],
+    [
+        "manufa23",
+        "distri14",
+        {
+            "cost": 24,
+            "time": 5,
+            "distance": 34
+        }
+    ],
+    [
+        "consum40",
+        "distri19",
+        {
+            "cost": 22,
+            "time": 5,
+            "distance": 39
+        }
+    ],
+    [
+        "proces7",
+        "consum40",
+        {
+            "cost": 29,
+            "time": 1,
+            "distance": 39
+        }
+    ],
+    [
+        "distri39",
+        "manufa8",
+        {
+            "cost": 10,
+            "time": 4,
+            "distance": 38
+        }
+    ],
+    [
+        "consum20",
+        "distri34",
+        {
+            "cost": 12,
+            "time": 2,
+            "distance": 28
+        }
+    ],
+    [
+        "proces17",
+        "proces7",
+        {
+            "cost": 22,
+            "time": 5,
+            "distance": 21
+        }
+    ],
+    [
+        "consum25",
+        "manufa28",
+        {
+            "cost": 19,
+            "time": 5,
+            "distance": 34
+        }
+    ],
+    [
+        "manufa13",
+        "distri4",
+        {
+            "cost": 24,
+            "time": 4,
+            "distance": 27
+        }
+    ],
+    [
+        "consum15",
+        "consum50",
+        {
+            "cost": 7,
+            "time": 1,
+            "distance": 25
+        }
+    ],
+    [
+        "suppli36",
+        "consum45",
+        {
+            "cost": 17,
+            "time": 2,
+            "distance": 14
+        }
+    ],
+    [
+        "proces37",
+        "consum40",
+        {
+            "cost": 6,
+            "time": 2,
+            "distance": 30
+        }
+    ],
+    [
+        "proces42",
+        "distri14",
+        {
+            "cost": 10,
+            "time": 3,
+            "distance": 12
+        }
+    ],
+    [
+        "manufa43",
+        "proces7",
+        {
+            "cost": 21,
+            "time": 2,
+            "distance": 20
+        }
+    ],
+    [
+        "consum15",
+        "manufa8",
+        {
+            "cost": 25,
+            "time": 3,
+            "distance": 27
+        }
+    ],
+    [
+        "suppli36",
+        "manufa18",
+        {
+            "cost": 24,
+            "time": 3,
+            "distance": 15
+        }
+    ],
+    [
+        "consum30",
+        "manufa43",
+        {
+            "cost": 17,
+            "time": 2,
+            "distance": 39
+        }
+    ],
+    [
+        "distri24",
+        "proces27",
+        {
+            "cost": 21,
+            "time": 1,
+            "distance": 22
+        }
+    ],
+    [
+        "distri19",
+        "proces32",
+        {
+            "cost": 13,
+            "time": 1,
+            "distance": 40
+        }
+    ],
+    [
+        "distri14",
+        "consum45",
+        {
+            "cost": 22,
+            "time": 1,
+            "distance": 49
+        }
+    ],
+    [
+        "suppli31",
+        "distri34",
+        {
+            "cost": 29,
+            "time": 5,
+            "distance": 47
+        }
+    ],
+    [
+        "suppli31",
+        "consum40",
+        {
+            "cost": 23,
+            "time": 5,
+            "distance": 14
+        }
+    ],
+    [
+        "distri29",
+        "distri44",
+        {
+            "cost": 14,
+            "time": 3,
+            "distance": 20
+        }
+    ],
+    [
+        "proces27",
+        "proces22",
+        {
+            "cost": 14,
+            "time": 2,
+            "distance": 41
+        }
+    ],
+    [
+        "proces12",
+        "proces2",
+        {
+            "cost": 6,
+            "time": 4,
+            "distance": 10
+        }
+    ],
+    [
+        "suppli41",
+        "suppli11",
+        {
+            "cost": 29,
+            "time": 5,
+            "distance": 16
+        }
+    ],
+    [
+        "suppli1",
+        "suppli11",
+        {
+            "cost": 15,
+            "time": 1,
+            "distance": 14
+        }
+    ],
+    [
+        "consum45",
+        "manufa18",
+        {
+            "cost": 17,
+            "time": 4,
+            "distance": 49
+        }
+    ],
+    [
+        "suppli11",
+        "proces17",
+        {
+            "cost": 15,
+            "time": 1,
+            "distance": 18
+        }
+    ],
+    [
+        "proces2",
+        "proces37",
+        {
+            "cost": 5,
+            "time": 4,
+            "distance": 48
+        }
+    ],
+    [
+        "manufa8",
+        "suppli6",
+        {
+            "cost": 29,
+            "time": 1,
+            "distance": 49
+        }
+    ],
+    [
+        "proces42",
+        "suppli16",
+        {
+            "cost": 21,
+            "time": 4,
+            "distance": 41
+        }
+    ],
+    [
+        "manufa13",
+        "proces7",
+        {
+            "cost": 10,
+            "time": 2,
+            "distance": 16
+        }
+    ],
+    [
+        "distri34",
+        "consum10",
+        {
+            "cost": 5,
+            "time": 5,
+            "distance": 42
+        }
+    ],
+    [
+        "consum15",
+        "suppli1",
+        {
+            "cost": 29,
+            "time": 1,
+            "distance": 30
+        }
+    ],
+    [
+        "distri9",
+        "suppli31",
+        {
+            "cost": 27,
+            "time": 2,
+            "distance": 43
+        }
+    ],
+    [
+        "suppli41",
+        "manufa33",
+        {
+            "cost": 30,
+            "time": 3,
+            "distance": 26
+        }
+    ],
+    [
+        "proces2",
+        "suppli46",
+        {
+            "cost": 11,
+            "time": 4,
+            "distance": 23
+        }
+    ],
+    [
+        "suppli6",
+        "manufa33",
+        {
+            "cost": 26,
+            "time": 5,
+            "distance": 22
+        }
+    ],
+    [
+        "suppli11",
+        "consum35",
+        {
+            "cost": 5,
+            "time": 1,
+            "distance": 47
+        }
+    ],
+    [
+        "distri44",
+        "consum50",
+        {
+            "cost": 18,
+            "time": 5,
+            "distance": 10
+        }
+    ],
+    [
+        "proces2",
+        "suppli6",
+        {
+            "cost": 24,
+            "time": 4,
+            "distance": 18
+        }
+    ],
+    [
+        "proces17",
+        "distri49",
+        {
+            "cost": 25,
+            "time": 3,
+            "distance": 25
+        }
+    ],
+    [
+        "distri39",
+        "distri19",
+        {
+            "cost": 20,
+            "time": 1,
+            "distance": 26
+        }
+    ],
+    [
+        "distri39",
+        "proces7",
+        {
+            "cost": 27,
+            "time": 1,
+            "distance": 45
+        }
+    ],
+    [
+        "suppli46",
+        "suppli26",
+        {
+            "cost": 15,
+            "time": 2,
+            "distance": 26
+        }
+    ],
+    [
+        "consum35",
+        "consum15",
+        {
+            "cost": 23,
+            "time": 3,
+            "distance": 32
+        }
+    ],
+    [
+        "distri14",
+        "distri49",
+        {
+            "cost": 25,
+            "time": 3,
+            "distance": 14
+        }
+    ],
+    [
+        "consum10",
+        "proces32",
+        {
+            "cost": 29,
+            "time": 4,
+            "distance": 34
+        }
+    ],
+    [
+        "consum45",
+        "consum15",
+        {
+            "cost": 10,
+            "time": 2,
+            "distance": 12
+        }
+    ],
+    [
+        "suppli21",
+        "distri24",
+        {
+            "cost": 7,
+            "time": 4,
+            "distance": 18
+        }
+    ],
+    [
+        "distri24",
+        "proces37",
+        {
+            "cost": 24,
+            "time": 1,
+            "distance": 25
+        }
+    ],
+    [
+        "consum5",
+        "consum15",
+        {
+            "cost": 9,
+            "time": 2,
+            "distance": 36
+        }
+    ],
+    [
+        "proces7",
+        "suppli16",
+        {
+            "cost": 20,
+            "time": 4,
+            "distance": 32
+        }
+    ],
+    [
+        "manufa13",
+        "distri19",
+        {
+            "cost": 7,
+            "time": 1,
+            "distance": 30
+        }
+    ],
+    [
+        "suppli26",
+        "distri44",
+        {
+            "cost": 22,
+            "time": 4,
+            "distance": 26
+        }
+    ],
+    [
+        "proces2",
+        "distri39",
+        {
+            "cost": 29,
+            "time": 1,
+            "distance": 12
+        }
+    ],
+    [
+        "consum15",
+        "distri29",
+        {
+            "cost": 5,
+            "time": 5,
+            "distance": 39
+        }
+    ],
+    [
+        "manufa43",
+        "distri14",
+        {
+            "cost": 6,
+            "time": 4,
+            "distance": 41
+        }
+    ],
+    [
+        "consum45",
+        "distri34",
+        {
+            "cost": 15,
+            "time": 3,
+            "distance": 12
+        }
+    ],
+    [
+        "consum35",
+        "suppli46",
+        {
+            "cost": 12,
+            "time": 2,
+            "distance": 12
+        }
+    ],
+    [
+        "proces42",
+        "manufa18",
+        {
+            "cost": 14,
+            "time": 5,
+            "distance": 38
+        }
+    ],
+    [
+        "manufa23",
+        "distri34",
+        {
+            "cost": 12,
+            "time": 5,
+            "distance": 15
+        }
+    ],
+    [
+        "suppli1",
+        "distri24",
+        {
+            "cost": 21,
+            "time": 4,
+            "distance": 28
+        }
+    ],
+    [
+        "manufa38",
+        "distri24",
+        {
+            "cost": 6,
+            "time": 2,
+            "distance": 10
+        }
+    ],
+    [
+        "proces2",
+        "proces47",
+        {
+            "cost": 21,
+            "time": 1,
+            "distance": 36
+        }
+    ],
+    [
+        "manufa8",
+        "proces32",
+        {
+            "cost": 30,
+            "time": 5,
+            "distance": 33
+        }
+    ],
+    [
+        "proces37",
+        "proces12",
+        {
+            "cost": 25,
+            "time": 5,
+            "distance": 26
+        }
+    ],
+    [
+        "distri4",
+        "distri9",
+        {
+            "cost": 15,
+            "time": 4,
+            "distance": 48
+        }
+    ],
+    [
+        "proces17",
+        "proces27",
+        {
+            "cost": 12,
+            "time": 3,
+            "distance": 25
+        }
+    ],
+    [
+        "proces42",
+        "consum45",
+        {
+            "cost": 16,
+            "time": 2,
+            "distance": 40
+        }
+    ],
+    [
+        "distri19",
+        "suppli11",
+        {
+            "cost": 5,
+            "time": 1,
+            "distance": 25
+        }
+    ],
+    [
+        "manufa48",
+        "consum15",
+        {
+            "cost": 7,
+            "time": 3,
+            "distance": 14
+        }
+    ],
+    [
+        "suppli21",
+        "manufa13",
+        {
+            "cost": 11,
+            "time": 1,
+            "distance": 48
+        }
+    ],
+    [
+        "proces37",
+        "proces17",
+        {
+            "cost": 29,
+            "time": 3,
+            "distance": 26
+        }
+    ],
+    [
+        "proces17",
+        "proces32",
+        {
+            "cost": 20,
+            "time": 2,
+            "distance": 13
+        }
+    ],
+    [
+        "consum15",
+        "proces17",
+        {
+            "cost": 24,
+            "time": 1,
+            "distance": 38
+        }
+    ],
+    [
+        "proces22",
+        "manufa8",
+        {
+            "cost": 19,
+            "time": 5,
+            "distance": 26
+        }
+    ],
+    [
+        "proces12",
+        "manufa23",
+        {
+            "cost": 15,
+            "time": 1,
+            "distance": 38
+        }
+    ],
+    [
+        "consum50",
+        "suppli6",
+        {
+            "cost": 18,
+            "time": 2,
+            "distance": 49
+        }
+    ],
+    [
+        "proces2",
+        "distri9",
+        {
+            "cost": 21,
+            "time": 2,
+            "distance": 49
+        }
+    ],
+    [
+        "proces32",
+        "manufa18",
+        {
+            "cost": 27,
+            "time": 3,
+            "distance": 42
+        }
+    ],
+    [
+        "suppli16",
+        "consum40",
+        {
+            "cost": 8,
+            "time": 1,
+            "distance": 15
+        }
+    ],
+    [
+        "consum25",
+        "distri44",
+        {
+            "cost": 20,
+            "time": 1,
+            "distance": 18
+        }
+    ],
+    [
+        "suppli46",
+        "distri49",
+        {
+            "cost": 22,
+            "time": 2,
+            "distance": 26
+        }
+    ],
+    [
+        "manufa28",
+        "manufa48",
+        {
+            "cost": 19,
+            "time": 4,
+            "distance": 25
+        }
+    ],
+    [
+        "proces7",
+        "suppli31",
+        {
+            "cost": 6,
+            "time": 5,
+            "distance": 13
+        }
+    ],
+    [
+        "proces47",
+        "manufa18",
+        {
+            "cost": 6,
+            "time": 4,
+            "distance": 32
+        }
+    ],
+    [
+        "consum50",
+        "proces17",
+        {
+            "cost": 17,
+            "time": 3,
+            "distance": 40
+        }
+    ]
+]
