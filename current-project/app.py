@@ -38,31 +38,31 @@ socketio = SocketIO(app, cors_allowed_origins="*")
 
 #### EXAMPLE 3 - METALLURGY ####
 # --- Supply Chain Network ---
-# with open("static/data/graph_nodes_mining.json") as f:
-#     nodes = json.load(f)
-
-# with open("static/data/graph_edges_mining.json") as f:
-#     edge_list = json.load(f)
-
-# network_data = {
-#     "nodes": nodes,
-#     "edges": [{"from": e[0], "to": e[1], **e[2]} for e in edge_list]
-# }
-
-#--------------------------------------------------------------------------------------------------#
-
-#### EXAMPLE 4 - FARM ####
-# --- Supply Chain Network ---
-with open("static/data/graph_nodes_farm.json") as f:
+with open("static/data/graph_nodes_mining.json") as f:
     nodes = json.load(f)
 
-with open("static/data/graph_edges_farm.json") as f:
+with open("static/data/graph_edges_mining.json") as f:
     edge_list = json.load(f)
 
 network_data = {
     "nodes": nodes,
     "edges": [{"from": e[0], "to": e[1], **e[2]} for e in edge_list]
 }
+
+#--------------------------------------------------------------------------------------------------#
+
+#### EXAMPLE 4 - FARM ####
+# --- Supply Chain Network ---
+# with open("static/data/graph_nodes_farm.json") as f:
+#     nodes = json.load(f)
+
+# with open("static/data/graph_edges_farm.json") as f:
+#     edge_list = json.load(f)
+
+# network_data = {
+#     "nodes": nodes,
+#     "edges": [{"from": e[0], "to": e[1], **e[2]} for e in edge_list]
+# }
 
 #--------------------------------------------------------------------------------------------------#
 
